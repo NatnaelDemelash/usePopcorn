@@ -1,8 +1,13 @@
 import React from "react";
 
-function Stars({ onRate, full }) {
+function Stars({ onRate, full, onHoverIn, onHoverOut }) {
   return (
-    <div className="star" onClick={onRate}>
+    <span
+      className="star"
+      onClick={onRate}
+      onMouseEnter={onHoverIn}
+      onMouseLeave={onHoverOut}
+    >
       {full ? (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -27,7 +32,7 @@ function Stars({ onRate, full }) {
           />
         </svg>
       )}
-    </div>
+    </span>
   );
 }
 

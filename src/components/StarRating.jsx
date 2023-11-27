@@ -3,6 +3,7 @@ import Stars from "./Stars";
 
 function StarRating() {
   const [rating, setRating] = useState(0);
+  const [tempRating, setTempRating] = useState(0);
 
   return (
     <div className="rating-container">
@@ -13,11 +14,15 @@ function StarRating() {
             onRate={() => {
               setRating(index + 1);
             }}
-            full={rating >= index + 1}
+            onHoverIn={() => setTempRating(index + 1)}
+            onHoverOut={() => setTempRating(0)}
+            full={tempRating ? tempRating >= index + 1 : rating >= index + 1}
           />
         ))}
       </div>
-      <div className="rating-text">{rating || ""}</div>
+      <div className="rating-text">
+        {tempRating ? tempRating : rating || ""}
+      </div>
     </div>
   );
 }
