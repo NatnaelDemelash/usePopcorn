@@ -1,10 +1,13 @@
 import React from "react";
+import logo from "../assets/logo.png";
 
 function NavBar({ query, movies }) {
   return (
     <nav className="nav-bar">
       <div className="logo">
-        <span role="img">🍿</span>
+        <span role="img">
+          <img src={logo} alt="Logo" />
+        </span>
         <h1>usePopcorn</h1>
       </div>
       <input

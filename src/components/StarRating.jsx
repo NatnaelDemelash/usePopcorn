@@ -20,9 +20,7 @@ function StarRating() {
           />
         ))}
       </div>
-      <div className="rating-text">
-        {tempRating ? tempRating : rating || ""}
-      </div>
+      <div className="rating-text">{tempRating || rating || ""}</div>
     </div>
   );
 }
