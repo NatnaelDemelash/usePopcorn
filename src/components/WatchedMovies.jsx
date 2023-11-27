@@ -1,4 +1,5 @@
 import React from "react";
+import StarRating from "./StarRating";
 
 function WatchedMovies({
   watched,
@@ -64,6 +65,8 @@ function WatchedMovies({
           </ul>
         </>
       )}
+
+      <StarRating />
     </div>
   );
 }
